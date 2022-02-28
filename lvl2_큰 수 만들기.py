@@ -18,3 +18,21 @@ def solution(number, k):
             break
         k -= (n - len(number)-1)
     return ''.join(str(_) for _ in answer_list) + ''.join(str(_) for _ in number)
+
+    # 8,10 런타임 에러
+
+    def solution(number, k):
+    digit=len(number)-k
+    j = list(map(int, number))
+    answer_list = []
+    while digit>0:
+        if '9' in j[:len(j)-digit+1]:
+            num==9
+        else:
+            num=max(j[:len(j)-digit+1])
+        j=j[j.index(num)+1:]
+        answer_list.append(num)
+        digit-=1
+    return ''.join(map(str,answer_list))
+
+    # 9,10 런타임 에러 
